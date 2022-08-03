@@ -8,6 +8,12 @@ SELECT *
 FROM `courses` 
 WHERE `cfu` > 10;
 
+3)Selezionare tutti gli studenti che hanno più di 30 ann
+SELECT *  
+FROM `students`  
+WHERE YEAR(curdate())-YEAR(date_of_birth) - (right(curdate(),5) < right(date_of_birth,5)) > 30   
+ORDER BY students.date_of_birth DESC;
+
 
 
 
